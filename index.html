@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Jezus Kristus kak smo žejni</title>
+<script src="scripts/index.js">
+</script>
 <style>
 body {
   background: url("img/tajl.png") repeat;
@@ -23,6 +25,11 @@ img {
   margin-right: auto;
   width: 40%;
 }
+  
+audio, embed {
+  position: absolute;
+  z-index: -9999;
+}
 </style>
 </head>
 <body>
@@ -32,12 +39,18 @@ img {
 
   <h1>KAK SMO ŽEJNI</h1>
   
-  <iframe src="uploads/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-  
-    <audio id="player" autoplay loop>
-      <source src="uploads/jezus_kristus_kak_smo_zejni.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+  $(".toggle-audio").on('click', function(event) {
+ audioPlaying = !audioPlaying;
+ $("#background-audio").remove();
+
+ clearInterval(backgroundAudio);
+ if(audioPlaying){
+    $(".audio1").play();
+    //play audio 
+  }else{
+    $(".audio1").pause();
+
+  }
   
 </body>
 
