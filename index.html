@@ -24,9 +24,10 @@ img {
   width: 40%;
 }
   
-audio, embed {
-  position: absolute;
-  z-index: -9999;
+player {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
  
 </style>
@@ -38,9 +39,7 @@ audio, embed {
 
   <h1>KAK SMO ŽEJNI</h1>
   
-  <iframe src="uploads/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-  
-    <audio id="player" autoplay loop>
+    <audio id="player" controls loop>
       <source src="uploads/jezus_kristus_kak_smo_zejni.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
