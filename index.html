@@ -30,16 +30,8 @@ audio, embed {
   position: absolute;
   z-index: -9999;
 }
-</style>
-</head>
-<body>
-  <h1>JEZUS KRISTUS</h1>
-
-  <img src="img/jx.gif" alt="Jezus Kristus" />
-
-  <h1>KAK SMO ŽEJNI</h1>
   
-  $(".toggle-audio").on('click', function(event) {
+$(".toggle-audio").on('click', function(event) {
  audioPlaying = !audioPlaying;
  $("#background-audio").remove();
 
@@ -50,7 +42,15 @@ audio, embed {
   }else{
     $(".audio1").pause();
 
-  }
+  }  
+</style>
+</head>
+<body>
+  <h1>JEZUS KRISTUS</h1>
+
+  <img src="img/jx.gif" alt="Jezus Kristus" />
+
+  <h1>KAK SMO ŽEJNI</h1>
   
 </body>
 
