@@ -12,3 +12,15 @@ if (!browser.indexOf('firefox') > -1) {
       }, 36000);
       //36000 is the duration of your audio which in this case 36 seconds.
 }
+$(".toggle-audio").on('click', function(event) {
+ audioPlaying = !audioPlaying;
+ $("#background-audio").remove();
+
+ clearInterval(backgroundAudio);
+ if(audioPlaying){
+    $(".audio1").play();
+    //play audio 
+  }else{
+    $(".audio1").pause();
+
+}
